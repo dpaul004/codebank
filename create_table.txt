@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS asa_testing.beacon_model3 (
+
+  cs host 					String
+, username 
+, timediff_mean 
+, timediff_sd 
+, cnt 
+, same_sc_bytes 
+, max_sc_bytes 
+, same_sc_bytes_pct 
+, same_cs_bytes 
+, max_cs_bytes 
+, same_cs_bytes_pct 
+, r_ip_unq_cnt 
+, host user cnt 
+, c_ip_cnt 
+, c_ip_list 
+, stb sc vol 
+, stb_cs_vol 
+, stb_sc_byte_mn 
+, stb_cs_byte_mn 
+, sc_spike_ratio 
+, cs_spike_ratio 
+, blank_ref_pct 
+, date_diff 
+, host user cnt_hist 
+, host_avg_txn 
+, cs_safe_host_score 
+, source
+, whois_registration_dt
+, whois_registrant )
+
+PARTITIONED BY(dt STRING)
+row format delimited fields terminated by '\t' 
+tblproperties ("skip.header.line.count""""l"); 
+  
